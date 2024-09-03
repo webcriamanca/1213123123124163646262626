@@ -17,9 +17,7 @@ OrionLib:MakeNotification({
 })
  
 -- Test Global Variables
-_G.Key = "KK"
-_G.Key = "OO"
-_G.Key = "GG"
+_G.Key = "K3y_1d1aLaca5Zre3yM3nu"
 _G.KeyInput = ""
  
 local function LoadTestHub()
