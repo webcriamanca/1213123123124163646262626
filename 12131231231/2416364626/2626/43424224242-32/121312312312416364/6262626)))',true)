@@ -3,15 +3,15 @@ local Player = game.Players.LocalPlayer
 
 -- Test Main Window
 local MainWindow = OrionLib:MakeWindow({
-    Name = "Test Hub",
+    Name = "LUCAS MENU",
     HidePremium = false,
     SaveConfig = true,
     IntroEnabled = false
 })
  
 OrionLib:MakeNotification({
-    Name = "Welcome To Test Hub!",
-    Content = "You Are Logged In As "..Player.Name..".",
+    Name = "Bem vindo..",
+    Content = "Entrando...",
     Image = "rbxassetid://4483345998",
     Time = 5
 })
@@ -27,8 +27,8 @@ end
 -- Notifications
 local function ShowCorrectKeyNotification()
     OrionLib:MakeNotification({
-        Name = "Correct Key!",
-        Content = "Loading Test Hub...",
+        Name = "key correta!",
+        Content = "Entrando no LucasMenu...",
         Image = "rbxassetid://4483345998",
         Time = 2
     })
@@ -36,8 +36,8 @@ end
  
 local function ShowIncorrectKeyNotification()
     OrionLib:MakeNotification({
-        Name = "Incorrect Key!",
-        Content = "Enter The Correct Key.",
+        Name = "key incorreta!",
+        Content = "Coloque a key certa.",
         Image = "rbxassetid://4483345998",
         Time = 2
     })
@@ -45,14 +45,14 @@ end
  
 -- Key System
 local KeySystemTab = MainWindow:MakeTab({
-    Name = "Key System",
+    Name = "SISTEMA DE KEY",
     Icon = "rbxassetid://2790551206",
     PremiumOnly = false
 })
  
 KeySystemTab:AddTextbox({
-    Name = "Enter Key Here!",
-    Default = "Key",
+    Name = "Coloque a key aqui",
+    Default = "",
     TextDisappear = true,
     Callback = function(Value)
         _G.KeyInput = Value
@@ -60,7 +60,7 @@ KeySystemTab:AddTextbox({
 })
  
 KeySystemTab:AddButton({
-    Name = "Check Key!",
+    Name = "Entrar!",
     Callback = function()
         if _G.KeyInput == _G.Key then
             ShowCorrectKeyNotification()
